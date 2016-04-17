@@ -155,36 +155,6 @@ a:focus {
     -o-background-size: cover;
 }
 
-.page3 {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #e82c78;
-    background: url(../img/Heavenly-Blush-03.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.page9 {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #e82c78;
-    background: url(../img/Heavenly-Blush-09.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
@@ -200,16 +170,6 @@ a:focus {
 
 @media(min-width:768px) {
     .intro {
-        height: 100%;
-        padding: 0;
-    }
-
-    .page3 {
-        height: 100%;
-        padding: 0;
-    }
-
-    .page9 {
         height: 100%;
         padding: 0;
     }
