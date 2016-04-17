@@ -20,6 +20,9 @@ of those sections to manage the look and feel of the site. */
     background-size: cover;
     -o-background-size: cover;
 }
+.intro-section-text {
+    font-size: 30px;
+}
 
 .about-section {
     height: 100%;
