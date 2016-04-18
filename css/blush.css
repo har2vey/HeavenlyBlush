@@ -92,7 +92,7 @@ header .intro-text .skills {
 }
 
 .contact {
-    background: url("../img/qa-bg.jpg") no-repeat bottom center scroll;
+    background: url("../img/qa-bg.jpg") no-repeat center center scroll;
     background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -101,7 +101,7 @@ header .intro-text .skills {
 }
 
 .content {
-    padding: 0px 25% 0px 25%;
+    padding: 0px 20% 0px 20%;
 }
 
 @media(min-width:768px) {
@@ -457,6 +457,9 @@ footer .footer-below {
     opacity: 0;
 }
 
+.form-group label {
+  color: #e82d78;
+}
 label input[type="radio"] ~ i.fa.fa-circle-o{
     color: #c8c8c8;    display: inline;
 }
