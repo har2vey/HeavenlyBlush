@@ -40,51 +40,26 @@
   	sliding = false;
   		$(document).ready(function() {
   			$('#fullpage').fullpage({
+            slidesNavigation: true,
   					scrollingSpeed:1000,
             css3: true,
-            afterLoad: function(anchorLink, index){
-              if (index == '1') {
-                slideTimeout = setInterval(function () {
+            afterRender: function () {
+                setInterval(function () {
                     $.fn.fullpage.moveSlideRight();
-                }, 2000);}
-              },
+                }, 3000);
+            },
+                  // Hide the slides container before the next slide loads
+            onSlideLeave: function(anchorLink, index, slideIndex, direction) {
+                $.fn.fullpage.setScrollingSpeed(0);
+                $('.fp-section').find('.fp-slidesContainer').hide();
+            },
 
-    			    onLeave: function(index, nextIndex, direction) {
-                  if (index == '1') {
-                    clearInterval(slideTimeout);
-                  }
-    			        if(index == 4 && !sliding) {
-    			            if(direction == 'down' && slideIndex < 2) {
-    			                sliding = true;
-    			                $.fn.fullpage.moveSlideRight();
-    			                slideIndex++;
-    			                return false;
-    			            } else if(direction == 'up' && slideIndex > 1) {
-    			                sliding = true;
-    			                $.fn.fullpage.moveSlideLeft();
-    			                slideIndex--;
-    			                return false;
-    			            }
-    			        }
-                  else if(index == 5 && !sliding) {
-    			            if(direction == 'down' && slideIndex < 4) {
-    			                sliding = true;
-    			                $.fn.fullpage.moveSlideRight();
-    			                slideIndex++;
-    			                return false;
-    			            } else if(direction == 'up' && slideIndex > 1) {
-    			                sliding = true;
-    			                $.fn.fullpage.moveSlideLeft();
-    			                slideIndex--;
-    			                return false;
-    			            }
-    			        } else if(sliding) {
-    			            return false;
-    			        }
-    			    },
-    			    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
-    			        sliding = false;
-    			    }
+            // Display the slides container by fading it in after the next slide has been loaded.
+            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+                $('.fp-section').find('.fp-slidesContainer').fadeIn(2000);
+                $.fn.fullpage.setScrollingSpeed(1000);
+            },
+
   			});
   		});
   	</script>
@@ -113,8 +88,8 @@
     	    <div class="slide blush9"></div>
           <div class="slide blush10"></div>
           <div class="slide blush11"></div>
+          <div class="slide blush12"></div>
     	</div>
-      <div class="section blush12" id="section5"></div>
     <!-- Contact Section -->
     <div class="section contact" id="section6">
         <div class="content container form-container">
