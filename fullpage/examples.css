@@ -241,28 +241,3 @@ p{
 	right:10px;
 	z-index: 999;
  }
-
- .blush1 {
-     background: url("blush_01.jpg") no-repeat center center scroll;
-     background-color: #fff;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     background-size: cover;
-     -o-background-size: cover;
- }
- .blush2 {
-     background: url("blush_02.jpg") no-repeat center center scroll;
-     background-color: #fff;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     background-size: cover;
-     -o-background-size: cover;
- }
- .blush3 {
-     background: url("blush_03.jpg") no-repeat center center scroll;
-     background-color: #fff;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     background-size: cover;
-     -o-background-size: cover;
- }
