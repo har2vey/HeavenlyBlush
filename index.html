@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/blush.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="fullpage/jquery.fullPage.css" />
+    <link rel="stylesheet" href="animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="fullpage/examples.css" />
 
     <!-- Custom Fonts -->
@@ -39,27 +40,66 @@
   	var slideIndex  = 1,
   	sliding = false;
   		$(document).ready(function() {
-  			$('#fullpage').fullpage({
-            slidesNavigation: true,
+        $('#fullpage').fullpage({
   					scrollingSpeed:1000,
             css3: true,
-            afterRender: function () {
-                setInterval(function () {
+
+            afterLoad: function(anchorLink, index){
+              if (index == '1') {
+                slideTimeout = setInterval(function () {
                     $.fn.fullpage.moveSlideRight();
-                }, 3000);
-            },
-                  // Hide the slides container before the next slide loads
-            onSlideLeave: function(anchorLink, index, slideIndex, direction) {
-                $.fn.fullpage.setScrollingSpeed(0);
-                $('.fp-section').find('.fp-slidesContainer').hide();
-            },
+                }, 2000);}
 
-            // Display the slides container by fading it in after the next slide has been loaded.
-            afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
-                $('.fp-section').find('.fp-slidesContainer').fadeIn(3000);
-                $.fn.fullpage.setScrollingSpeed(1000);
-            },
+                //execute animation
+                if(index == 3){
+                    $('#content3').prepend('<img src="img/yo.png" class="animated bounceInDown" />');
+                    setTimeout(function() {
+                      $('#content3').append('<img src="img/text-3.png" class="animated fadeIn"/>');
+                    }, 1800);
+                }
+                if(index == 4){
+                    $('#content4').prepend('<img src="img/yo_splash.png" class="rightAllign animated bounceInDown" />');
+                    setTimeout(function() {
+                      $('#content4').prepend('<img src="img/text-4.png" class="animated fadeIn"/>');
+                    }, 1800);
+                }
+                if(index == 5){
+                    $('#content5').prepend('<img src="img/strawberry.png" class="cornerimage5a animated bounceInDown" />');
+                    setTimeout(function() {
+                      $('#content5').append('<img src="img/text-5.png" class="cornerimage5b animated fadeIn"/>');
+                    }, 1800);
+                }
+              },
 
+            onLeave: function(index, nextIndex, direction) {
+                  if (index == '1') {
+                    clearInterval(slideTimeout);
+                  }
+                  else if(index == 6 && !sliding) {
+    			            if(direction == 'down' && slideIndex < 6) {
+    			                sliding = true;
+    			                $.fn.fullpage.moveSlideRight();
+    			                slideIndex++;
+    			                return false;
+    			            }
+    			        } else if(sliding) {
+    			            return false;
+    			        }
+
+                  //resetting page
+                  if(index != 3){
+                    $('#content3').empty();
+                  }
+                  if(index != 4){
+                    $('#content4').empty();
+                  }
+                  if(index != 5){
+                    $('#content5').empty();
+                  }
+    			    },
+    			    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+    			        sliding = false;
+    			    }
   			});
   		});
   	</script>
@@ -70,20 +110,26 @@
 
     <!-- Header -->
 <div id="fullpage">
-    	<div class="section" id="section0">
-    			<div class="slide active blush1"><img src="img/logo.png"></img></div>
+
+    	<div class="section" id="section1">
+    			<div class="slide active blush1"></div>
     	    <div class="slide blush2"><h1></h1></div>
     	    <div class="slide blush3"><h1></h1></div>
     	</div>
-      <div class="section blush4" id="section1">
-    		<iframe src="https://www.youtube.com/embed/0ueuHLMXybc" frameborder="0" width="80%" height="80%" allowfullscreen></iframe>
+      <div class="section blush4" id="section2">
+    		<iframe src="https://www.youtube.com/embed/0ueuHLMXybc" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
+
       </div>
-      <div class="section blush5" id="section2"></div>
-      <div class="section" id="section3">
-    			<div class="slide active blush6"></div>
-    	    <div class="slide blush7"></div>
+      <div class="section blush5" id="section3">
+        <div id="content3" class="leftPad"></div>
+      </div>
+      <div class="section blush6" id="section4">
+    			<div id="content4" class="rightPad"></div>
     	</div>
-      <div class="section" id="section4">
+      <div class="section blush7" id="section5">
+        <div id="content5"></div>
+      </div>
+      <div class="section" id="section6">
     			<div class="slide active blush8"></div>
     	    <div class="slide blush9"></div>
           <div class="slide blush10"></div>
@@ -91,7 +137,7 @@
           <div class="slide blush12"></div>
     	</div>
     <!-- Contact Section -->
-    <div class="section contact" id="section6">
+    <div class="section contact" id="section7">
         <div class="content container form-container">
             <div class="row">
                 <div class="col-lg-12 text-center">

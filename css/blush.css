@@ -27,7 +27,11 @@ h5,
 h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#e82d78;
 }
 
 hr.star-light,
@@ -127,8 +131,38 @@ header .intro-text .skills {
     height: 90%;
 }
 
+.absoluteCenter {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
+}
+
+.rightAllign {
+    display: block;
+    float: right;
+}
+.leftAllign {
+    display: block;
+    float: left;
+}
+.cornerimage5a { position: absolute; top: 0; left: 0; }
+.cornerimage5b { position: absolute; bottom: 35%; right: 8%; }
+
+.rightPad {
+    padding-right: 25%;
+}
+.leftPad {
+    padding-left: 25%;
+}
+
  .blush1 {
-     background: url("../img/blush_01.jpg") no-repeat center center scroll;
+     background: url("../img/Heavenly-Blush-01.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -162,7 +196,7 @@ header .intro-text .skills {
  }
 
  .blush5 {
-     background: url("../img/Heavenly-Blush-03.jpg") no-repeat center center scroll;
+     background: url("../img/bg-3.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -171,7 +205,7 @@ header .intro-text .skills {
  }
 
  .blush6 {
-     background: url("../img/Heavenly-Blush-04.jpg") no-repeat center center scroll;
+     background: url("../img/bg-4.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -179,7 +213,7 @@ header .intro-text .skills {
      -o-background-size: cover;
  }
  .blush7 {
-     background: url("../img/Heavenly-Blush-05.jpg") no-repeat center center scroll;
+     background: url("../img/bg-5.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
