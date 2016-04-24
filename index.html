@@ -18,7 +18,6 @@
     <link href="css/blush.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="fullpage/jquery.fullPage.css" />
     <link rel="stylesheet" href="animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="fullpage/examples.css" />
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -36,6 +35,7 @@
   	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
   	<script type="text/javascript" src="fullpage/jquery.fullPage.js"></script>
+
     <script type="text/javascript">
   	var slideIndex  = 1,
   	sliding = false;
@@ -45,8 +45,8 @@
             css3: true,
 
             afterLoad: function(anchorLink, index){
-              if (index == '1') {
-                slideTimeout = setInterval(function () {
+                if (index == '1') {
+                  slideTimeout = setInterval(function () {
                     $.fn.fullpage.moveSlideRight();
                 }, 2000);}
 
@@ -69,14 +69,25 @@
                       $('#content5').append('<img src="img/text-5.png" class="cornerimage5b animated fadeIn"/>');
                     }, 1500);
                 }
+                if(index == 6){
+                  $('#content6').prepend('<div class="innerbox animated slideInDown">Mengapa kami berbeda dengan yogurt lain?</div>');
+                }
+                if(index == 7){
+                    $('#content10').append('<img src="img/yo-3.png" class="imgRealMini animated bounceInLeft"/><img src="img/yo-1.png" class="imgRealMini animated bounceInDown"/><img src="img/yo-2.png" class="imgRealMini animated bounceInRight"/>');
+                    setTimeout(function() {
+                      $('#content10').empty();
+                      $('#section7').addClass('blush12');
+                    }, 1500);
+                }
               },
 
-            onLeave: function(index, nextIndex, direction) {
+              onLeave: function(index, nextIndex, direction) {
                   if (index == '1') {
                     clearInterval(slideTimeout);
                   }
                   else if(index == 6 && !sliding) {
-    			            if(direction == 'down' && slideIndex < 6) {
+                    //alert(slideIndex);
+    			            if(direction == 'down' && slideIndex < 4) {
     			                sliding = true;
     			                $.fn.fullpage.moveSlideRight();
     			                slideIndex++;
@@ -96,8 +107,24 @@
                   if(index != 5){
                     $('#content5').empty();
                   }
+                  if(index != 6){
+                    $('#content6').empty();
+                  }
+                  if(index != 7){
+                    $('#section7').removeClass('blush12');
+                  }
     			    },
+
     			    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+                  if(slideIndex == 1) {
+                    $('#content7').prepend('<div class="innerbox animated slideInDown">Karena kami bukan hanya Yogurt, tapi Yogurt dan kebaikan. Kami percaya bahwa yogurt ditambah manfaat extra akan semakin menyempurnakan yogurt. Kami menambahkan kalsium & serat prebiotik yang membuat Yogurt kami sempurna.</div>');
+                  }
+                  if(slideIndex == 2) {
+                    $('#content8').prepend('<div class="innerbox animated slideInDown">Kandungan gula & lemak yang berlebih akan mengurangi kesempurnaan yogurt. Oleh karena itu, kami mengurangi kadar gula dan lemak sehingga membuat yogurt heavenly blush semakin pas untuk dinikmati setiap hari.</div>');
+                  }
+                  if(slideIndex == 3) {
+                    $('#content9').append('<img src="img/label.png" class="imgMini animated fadeIn"></img>');
+                  }
     			        sliding = false;
     			    }
   			});
@@ -109,10 +136,12 @@
 <body id="page-top" class="index">
 
     <!-- Header -->
-<div id="fullpage">
+    <div id="fullpage">
 
     	<div class="section" id="section1">
-    			<div class="slide active blush1"></div>
+    			<div class="slide active blush1">
+
+          </div>
     	    <div class="slide blush2"><h1></h1></div>
     	    <div class="slide blush3"><h1></h1></div>
     	</div>
@@ -129,15 +158,17 @@
       <div class="section blush7" id="section5">
         <div id="content5"></div>
       </div>
-      <div class="section" id="section6">
-    			<div class="slide active blush8"></div>
-    	    <div class="slide blush9"></div>
-          <div class="slide blush10"></div>
-          <div class="slide blush11"></div>
-          <div class="slide blush12"></div>
+      <div class="section blush8" id="section6">
+    			<div class="slide active"><div class="outerbox" id="content6"></div></div>
+    	    <div class="slide"><div class="outerbox" id="content7"></div></div>
+          <div class="slide"><div class="outerbox" id="content8"></div></div>
+          <div class="slide"><div id="content9"></div></div>
     	</div>
-    <!-- Contact Section -->
-    <div class="section contact" id="section7">
+      <div class="section blush9" id="section7">
+        <div id="content10"></div>
+      </div>
+      <!-- Form Section -->
+      <div class="section contact" id="section8">
         <div class="content container form-container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -148,9 +179,9 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" action="#" method="GET" novalidate>
+                    <form name="sentMessage" id="contactForm" action="success.html" method="GET" novalidate>
                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <div class="form-group col-xs-12 floating-label-form-group controls formMini">
                                 <label>Nama</label>
                                 <input type="text" class="form-control" placeholder="Nama" id="name" required data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
@@ -195,28 +226,8 @@
             </div>
         </div>
     </div>
-
 </div>
-<!--
 
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <script src="js/jquery.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-    <script src="js/freelancer.js"></script>
--->
 </body>
 
 </html>

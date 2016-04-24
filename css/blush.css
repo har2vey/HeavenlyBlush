@@ -28,7 +28,6 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: normal;
-    font-size: 100%;
     margin:0;
     padding:0;
     color:#e82d78;
@@ -95,6 +94,14 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
 .fp-controlArrow {
     display:none;
     position: absolute;
@@ -165,9 +172,52 @@ header .intro-text .skills {
     max-width: 100%;
     height: auto;
 }
-.imgMini {
-    width: 25%;
-    height: auto;
+
+.outerbox {
+  margin:0 0 auto 0;
+  clear:left;
+  height:auto;
+  top: 0;
+}
+.innerbox {
+  background: #fff;
+  opacity: .7;
+  max-width: 100%;
+  font-size: 2em;
+  color: #e82d78;
+  margin: 0 20% 40% 20%;
+  padding: 35px;
+  border-radius: 25px;
+  border: 2px solid #e82d78;
+}
+
+@media only screen and (max-width: 500px) {
+    .imgMini {
+        width: 50%;
+        height: auto;
+    }
+
+    .imgRealMini {
+        width: 30%;
+        height: 30%;
+        height: auto;
+    }
+
+    .formMini {
+        font-size: 8;
+    }
+
+    .innerbox {
+      background: #fff;
+      opacity: .7;
+      max-width: 100%;
+      font-size: 1em;
+      color: #e82d78;
+      margin: 0 20% 40% 20%;
+      padding: 25px;
+      border-radius: 25px;
+      border: 2px solid #e82d78;
+    }
 }
 
  .blush1 {
@@ -231,7 +281,7 @@ header .intro-text .skills {
  }
 
  .blush8 {
-     background: url("../img/Heavenly-Blush-06.jpg") no-repeat center center scroll;
+     background: url("../img/bg-6.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -239,7 +289,7 @@ header .intro-text .skills {
      -o-background-size: cover;
  }
  .blush9 {
-     background: url("../img/Heavenly-Blush-07.jpg") no-repeat center center scroll;
+     background: url("../img/bg-7.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -265,6 +315,24 @@ header .intro-text .skills {
 
  .blush12 {
      background: url("../img/Heavenly-Blush-10.jpg") no-repeat center center scroll;
+     background-color: #fff;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+ }
+
+ .blush13a {
+     background: url("../img/Heavenly-Blush-12.jpg") no-repeat center center scroll;
+     background-color: #fff;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+ }
+
+ .blush13b {
+     background: url("../img/Heavenly-Blush-12.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -348,7 +416,7 @@ section {
 }
 
 section h3 {
-    font-size: 2em;
+    font-size: 3em;
     color: #e82d78;
 }
 
