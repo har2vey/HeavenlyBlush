@@ -137,7 +137,6 @@
 
     <!-- Header -->
     <div id="fullpage">
-
     	<div class="section" id="section1">
     			<div class="slide active blush1">
 
@@ -169,7 +168,7 @@
       </div>
       <!-- Form Section -->
       <div class="section contact" id="section8">
-        <div class="content container form-container">
+        <div class="content container form-container" id="submitForm">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>Get The Surprise!</h3>
@@ -179,25 +178,25 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" action="success.html" method="GET" novalidate>
+                    <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls formMini">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Nama</label>
-                                <input type="text" class="form-control" placeholder="Nama" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Nama" id="name" required data-validation-required-message="Silahkan masukan nama">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email</label>
-                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email address.">
+                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Silahkan masukan email">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>No Handphone</label>
-                                <input type="tel" class="form-control" placeholder="Handphone" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <label>Handphone</label>
+                                <input type="number" class="form-control" placeholder="Handphone" id="phone" required data-validation-required-message="Silahkan masukan no HP">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -225,9 +224,10 @@
                 </div>
             </div>
         </div>
-    </div>
+      </div>
 </div>
-
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
 </body>
 
 </html>
