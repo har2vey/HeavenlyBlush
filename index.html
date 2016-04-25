@@ -72,7 +72,7 @@
                     }, 1500);
                 }
                 if(index == 6){
-                  $('#content6').prepend('<div class="innerbox animated zoomIn">Mengapa kami berbeda dengan yogurt lain?</div>');
+                  $('#content6').prepend('<div class="innerbox animated slideInDown">Mengapa kami berbeda dengan yogurt lain?</div>');
                 }
                 if(index == 7){
                     $('#content10').append('<img src="img/yo-3.png" class="imgRealMini animated bounceInLeft"/><img src="img/yo-1.png" class="imgRealMini animated bounceInDown"/><img src="img/yo-2.png" class="imgRealMini animated bounceInRight"/>');
@@ -119,10 +119,12 @@
 
     			    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
                   if(slideIndex == 1) {
-                    $('#content7').prepend('<div class="innerbox animated zoomIn">Karena kami bukan hanya Yogurt, tapi Yogurt dan kebaikan. Kami percaya bahwa yogurt ditambah manfaat extra akan semakin menyempurnakan yogurt. Kami menambahkan kalsium & serat prebiotik yang membuat Yogurt kami sempurna.</div>');
+                    $('#content7').empty();
+                    $('#content7').append('<div class="innerbox animated slideInDown">Karena kami bukan hanya Yogurt, tapi Yogurt dan kebaikan. Kami percaya bahwa yogurt ditambah manfaat extra akan semakin menyempurnakan yogurt. Kami menambahkan kalsium & serat prebiotik yang membuat Yogurt kami sempurna.</div>');
                   }
                   if(slideIndex == 2) {
-                    $('#content8').prepend('<div class="innerbox animated zoomIn">Kandungan gula & lemak yang berlebih akan mengurangi kesempurnaan yogurt. Oleh karena itu, kami mengurangi kadar gula dan lemak sehingga membuat yogurt heavenly blush semakin pas untuk dinikmati setiap hari.</div>');
+                    $('#content8').empty();
+                    $('#content8').append('<div class="innerbox animated slideInDown">Kandungan gula & lemak yang berlebih akan mengurangi kesempurnaan yogurt. Oleh karena itu, kami mengurangi kadar gula dan lemak sehingga membuat yogurt heavenly blush semakin pas untuk dinikmati setiap hari.</div>');
                   }
                   if(slideIndex == 3) {
                     $('#content9').append('<img src="img/label.png" class="imgMini1 animated fadeIn"></img>');
