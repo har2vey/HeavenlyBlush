@@ -294,7 +294,7 @@ header .intro-text .skills {
         width: 80%;
     }
     .imgText0 {
-        width: 100%;
+        width: 120%;
     }
 
     .imgRealMini {
@@ -309,7 +309,7 @@ header .intro-text .skills {
       max-width: 100%;
       font-size: 1em;
       color: #e82d78;
-      margin: 0 20% 50% 20%;
+      margin: 0 20% 30% 20%;
       padding: 25px;
       border-radius: 25px;
       border: 2px solid #e82d78;
