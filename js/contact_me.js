@@ -6,7 +6,7 @@ $(function() {
             // additional error messages or events
         },
         submitSuccess: function($form, event) {
-            window.location = 'success.html';
+            window.location = 'http://heavenlyblush.buatbuat.com/success.html';
         },
         filter: function() {
             return $(this).is(":visible");

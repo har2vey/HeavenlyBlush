@@ -37,6 +37,15 @@
   	<script type="text/javascript" src="fullpage/jquery.fullPage.js"></script>
 
     <script type="text/javascript">
+    $.fn.preload = function() {
+        this.each(function(){
+            $('<img/>')[0].src = this;
+        });
+    }
+    //preload images
+    $(['img/yo.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png'],'img/label.png','img/Heavenly-Blush-10.jpg').preload();
+
+    //start fullPage.js
   	var slideIndex  = 1,
   	sliding = false;
   		$(document).ready(function() {
