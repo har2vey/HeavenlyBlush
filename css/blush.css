@@ -657,7 +657,6 @@ section.success a.active {
 .floating-label-form-group input,
 .floating-label-form-group textarea {
     z-index: 1;
-    width: 50%;
     position: relative;
     padding-right: 0;
     padding-left: 0;
