@@ -133,7 +133,7 @@ header .intro-text .skills {
 .absoluteTop {
     position: absolute;
     top: 0;
-    bottom: 88%;
+    bottom: 85%;
     left: 0;
     right: 0;
     max-width: 100%;
@@ -143,7 +143,7 @@ header .intro-text .skills {
 }
 .absoluteBottom {
     position: absolute;
-    top: 88%;
+    top: 92%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -153,12 +153,6 @@ header .intro-text .skills {
     overflow: auto;
 }
 .top {
-  display: inline-block;
-  background-color: #e82d78;
-  width: 4em;
-  height: 4em;
-  border: 0.5em solid #e82d78;
-  border-radius: 50%;
 }
 
 .top:after {
@@ -175,12 +169,6 @@ header .intro-text .skills {
 }
 
 .bottom {
-  display: inline-block;
-  background-color: #e82d78;
-  width: 4em;
-  height: 4em;
-  border: 0.5em solid #e82d78;
-  border-radius: 50%;
 }
 
 .bottom:after {
@@ -226,7 +214,7 @@ header .intro-text .skills {
   max-width: 100%;
   font-size: 1.5em;
   color: #e82d78;
-  margin: 0 20% 40% 20%;
+  margin: 0 20% 30% 20%;
   padding: 35px;
   border-radius: 25px;
   border: 2px solid #e82d78;
@@ -234,10 +222,10 @@ header .intro-text .skills {
 
 @media only screen and (min-width: 1600px) {
     .imgMini1 {
-        width: 22%;
+        width: 25%;
     }
     .imgMini2 {
-        width: 35%;
+        width: 42%;
     }
     .imgMini3 {
         width: 100%;
@@ -321,7 +309,7 @@ header .intro-text .skills {
       max-width: 100%;
       font-size: 1em;
       color: #e82d78;
-      margin: 0 20% 40% 20%;
+      margin: 0 20% 50% 20%;
       padding: 25px;
       border-radius: 25px;
       border: 2px solid #e82d78;
