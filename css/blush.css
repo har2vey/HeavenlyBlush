@@ -192,8 +192,6 @@ header .intro-text .skills {
     display: block;
     float: left;
 }
-.cornerimage5a { position: absolute; top: 0; left: 0; }
-.cornerimage5b { position: absolute; bottom: 30%; right: 10%; }
 
 .rightPad {
     padding-right: 20%;
@@ -224,7 +222,10 @@ header .intro-text .skills {
   width:100%;
   height:auto;
 }
-.imgAbsolute {
+.imgCornerLeft { 
+  position: absolute; top: 0; left: 0;
+}
+.imgCornerRight {
   position: absolute; top: 0; right: 0;
 }
 

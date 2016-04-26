@@ -44,11 +44,10 @@
         });
     }
     //preload images
-    $(['img/yo.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png'],'img/label.png','img/Heavenly-Blush-10.jpg').preload();
+    $(['img/yo.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/label.png','img/Heavenly-Blush-10.jpg']).preload();
 
     //start fullPage.js
-  	var slideIndex1  = 1, slideIndex2  = 1
-  	sliding = false;
+  	var slideIndex1  = 1, slideIndex2  = 1, sliding = false;
   		$(document).ready(function() {
         $('#fullpage').fullpage({
             anchors:['index','video','slide3','slide4','slide5','slide6','submit'],
@@ -66,14 +65,14 @@
                 if(index == 3){
                     $('#content3').prepend('<img src="img/yo.png" class="animated imgMini1 bounceInDown" />');
                     setTimeout(function() {
-                      $('#content3').append('<img src="img/text-3.png" class="imgAbsolute imgText animated fadeIn"/>');
+                      $('#content3').append('<img src="img/text-3.png" class="imgCornerRight imgText animated fadeIn"/>');
                     }, 1000);
                 }
                 if(index == 4){
                     $.fn.fullpage.moveTo('slide4', 0);
                     $('#content4').prepend('<img src="img/yo_splash.png" class="imgMini2 animated bounceInDown" />');
                     setTimeout(function() {
-                      $('#content4').append('<img id="text4" src="img/text-4.png" class="imgText cornerimage5a animated fadeIn"/>');
+                      $('#content4').append('<img id="text4" src="img/text-4.png" class="imgText imgCornerLeft animated fadeIn"/>');
                     }, 1000);
                 }
                 if(index == 5){
@@ -107,9 +106,9 @@
     			        } else if(index == 4 && !sliding) {
     			            if(direction == 'down' && slideIndex1 < 2) {
                         $('#text4').remove();
-                        $('#content4').append('<img src="img/strawberry.png" class="imgMini3 cornerimage5a animated bounceInDown" />');
+                        $('#content4').append('<img src="img/strawberry.png" class="imgMini3 imgCornerLeft animated bounceInDown" />');
                         setTimeout(function() {
-                          $('#content4').append('<img src="img/text-5.png" class="imgAbsolute imgText animated fadeIn"/>');
+                          $('#content4').append('<img src="img/text-5.png" class="imgText imgCornerRight animated fadeIn"/>');
                         }, 1000);
                         slideIndex1++;
   			                return false;
