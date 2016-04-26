@@ -232,125 +232,30 @@ header .intro-text .skills {
   display: none;
 }
 
-@media only screen and (min-width: 1600px) {
-    .imgMini1 {
-        width: 15%;
-    }
-    .imgMini2 {
-        width: 35%;
-    }
-    .imgMini3 {
-        width: 100%;
-    }
-    .imgText {
-        width: 90%;
-    }
-    .imgMiniLogo {
-        width: 20%;
-    }
-    .imgRealMini {
-        width: 13%;
-        height: 13%;
-        height: auto;
-    }
-
-    .innerbox {
-      background: #fff;
-      opacity: .8;
-      max-width: 100%;
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 2em;
-      color: #e82d78;
-      margin: 0 20% 40% 20%;
-      padding: 25px;
-      border-radius: 25px;
-      border: 2px solid #e82d78;
-    }
-    .blush1 {
-        background: url("../img/blush_01.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush2 {
-        background: url("../img/blush_02.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush3 {
-        background: url("../img/blush_03.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-}
-
-@media only screen and (max-width: 640px) {
-    .imgMini1 {
-        width: 35%;
-    }
-    .imgMini2 {
-        width: 75%;
-    }
-    .imgMini3 {
-        width: 150%;
-    }
-    .imgText {
-        width: 200%;
-    }
-    .imgMiniLogo {
-        width: 50%;
-    }
-    .imgRealMini {
-        width: 32%;
-        height: 32%;
-        height: auto;
-    }
-
-    .innerbox {
-      background: #fff;
-      opacity: .8;
-      max-width: 100%;
-      font-size: 1em;
-      color: #e82d78;
-      margin: 0 10% 30% 10%;
-      padding: 25px;
-      border-radius: 25px;
-      border: 2px solid #e82d78;
-    }
-
-    .blush1 {
-        background: url("../img/mob-1.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush2 {
-        background: url("../img/mob-2.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush3 {
-        background: url("../img/mob-3.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-}
+  .blush1 {
+      background: url("../img/blush_01.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+  .blush2 {
+      background: url("../img/blush_02.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+  .blush3 {
+      background: url("../img/blush_03.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
 
  .blush4 {
      background: url("../img/bg-2.jpg") no-repeat center center scroll;
@@ -457,7 +362,7 @@ header .intro-text .skills {
 }
 
 .content {
-    padding: 0px 20% 0px 20%;
+    padding: 0px 22% 0px 22%;
 }
 
 @media(min-width:768px) {
@@ -468,55 +373,6 @@ header .intro-text .skills {
 
     header .intro-text .skills {
         font-size: 1.75em;
-    }
-}
-
-@media(min-width:768px) {
-    .navbar-fixed-top {
-        padding: 25px 0;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-
-    .blush1 {
-        background: url("../img/blush_01.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush2 {
-        background: url("../img/blush_02.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush3 {
-        background: url("../img/blush_03.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
     }
 }
 
@@ -573,63 +429,6 @@ section.success a.active {
 
     section.first {
         padding-top: 75px;
-    }
-}
-
-#portfolio .portfolio-item {
-    right: 0;
-    margin: 0 0 15px;
-}
-
-#portfolio .portfolio-item .portfolio-link {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background: rgba(24,188,156,.9);
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 1;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption .caption-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 20px;
-    margin-top: -12px;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption .caption-content i {
-    margin-top: -12px;
-}
-
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
-    margin: 0;
-}
-
-#portfolio * {
-    z-index: 2;
-}
-
-@media(min-width:767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
     }
 }
 
@@ -808,4 +607,104 @@ color: #e82d78;
 div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
 -webkit-box-shadow: none;
 box-shadow: none;
+}
+
+@media only screen and (min-width: 1600px) {
+    .imgMini1 {
+        width: 15%;
+    }
+    .imgMini2 {
+        width: 35%;
+    }
+    .imgMini3 {
+        width: 100%;
+    }
+    .imgText {
+        width: 90%;
+    }
+    .imgMiniLogo {
+        width: 20%;
+    }
+    .imgRealMini {
+        width: 13%;
+        height: 13%;
+        height: auto;
+    }
+
+    .content {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .innerbox {
+      background: #fff;
+      opacity: .8;
+      max-width: 100%;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 2em;
+      color: #e82d78;
+      margin: 0 20% 40% 20%;
+      padding: 25px;
+      border-radius: 25px;
+      border: 2px solid #e82d78;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .imgMini1 {
+        width: 35%;
+    }
+    .imgMini2 {
+        width: 75%;
+    }
+    .imgMini3 {
+        width: 150%;
+    }
+    .imgText {
+        width: 200%;
+    }
+    .imgMiniLogo {
+        width: 50%;
+    }
+    .imgRealMini {
+        width: 32%;
+        height: 32%;
+        height: auto;
+    }
+
+    .innerbox {
+      background: #fff;
+      opacity: .8;
+      max-width: 100%;
+      font-size: 1em;
+      color: #e82d78;
+      margin: 0 10% 30% 10%;
+      padding: 25px;
+      border-radius: 25px;
+      border: 2px solid #e82d78;
+    }
+
+    .blush1 {
+        background: url("../img/mob-1.jpg") no-repeat center center scroll;
+        background-color: #fff;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    .blush2 {
+        background: url("../img/mob-2.jpg") no-repeat center center scroll;
+        background-color: #fff;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    .blush3 {
+        background: url("../img/mob-3.jpg") no-repeat center center scroll;
+        background-color: #fff;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
 }
