@@ -212,6 +212,7 @@ header .intro-text .skills {
   background: #fff;
   opacity: .7;
   max-width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5em;
   color: #e82d78;
   margin: 0 20% 30% 20%;
@@ -223,24 +224,26 @@ header .intro-text .skills {
   width:100%;
   height:auto;
 }
+.imgAbsolute {
+  position: absolute; top: 0; right: 0;
+}
 
 @media only screen and (min-width: 1600px) {
     .imgMini1 {
-        width: 25%;
+        width: 15%;
     }
     .imgMini2 {
-        width: 42%;
+        width: 35%;
     }
     .imgMini3 {
         width: 100%;
     }
     .imgText {
-        width: 30%;
+        width: 90%;
     }
-    .imgText0 {
-        width: 50%;
+    .imgMiniLogo {
+        width: 20%;
     }
-
     .imgRealMini {
         width: 13%;
         height: 13%;
@@ -251,6 +254,7 @@ header .intro-text .skills {
       background: #fff;
       opacity: .7;
       max-width: 100%;
+      font-family: 'Source Sans Pro', sans-serif;
       font-size: 2em;
       color: #e82d78;
       margin: 0 20% 40% 20%;
@@ -286,27 +290,23 @@ header .intro-text .skills {
 
 @media only screen and (max-width: 640px) {
     .imgMini1 {
-        width: 60%;
+        width: 35%;
     }
     .imgMini2 {
-        width: 80%;
+        width: 75%;
     }
     .imgMini3 {
-        width: 100%;
+        width: 150%;
     }
     .imgText {
-        width: 80%;
+        width: 200%;
     }
-    .imgText0 {
-        width: 90%;
-        position: absolute;
-        top: 10px;
-        left: 10px;
+    .imgMiniLogo {
+        width: 50%;
     }
-
     .imgRealMini {
-        width: 33%;
-        height: 33%;
+        width: 32%;
+        height: 32%;
         height: auto;
     }
 

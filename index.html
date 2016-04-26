@@ -21,6 +21,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -46,11 +47,11 @@
     $(['img/yo.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png'],'img/label.png','img/Heavenly-Blush-10.jpg').preload();
 
     //start fullPage.js
-  	var slideIndex  = 1,
+  	var slideIndex1  = 1, slideIndex2  = 1
   	sliding = false;
   		$(document).ready(function() {
         $('#fullpage').fullpage({
-            anchors:['index','video','slide3','slide4','slide5','slide6','slide7','submit'],
+            anchors:['index','video','slide3','slide4','slide5','slide6','submit'],
   					scrollingSpeed:1000,
             resize: true,
             css3: true,
@@ -63,33 +64,30 @@
 
                 //execute animation
                 if(index == 3){
-                    $('#content3').prepend('<img src="img/yo.png" class="imgMini1 leftAllign animated bounceInDown" />');
+                    $('#content3').prepend('<img src="img/yo.png" class="animated imgMini1 bounceInDown" />');
                     setTimeout(function() {
-                      $('#content3').append('<img src="img/text-3.png" class="imgText0 animated fadeIn"/>');
-                    }, 1500);
+                      $('#content3').append('<img src="img/text-3.png" class="imgAbsolute imgText animated fadeIn"/>');
+                    }, 1000);
                 }
                 if(index == 4){
-                    $('#content4').prepend('<img src="img/yo_splash.png" class="imgMini2 rightAllign animated bounceInDown" />');
+                    $.fn.fullpage.moveTo('slide4', 0);
+                    $('#content4').prepend('<img src="img/yo_splash.png" class="imgMini2 animated bounceInDown" />');
                     setTimeout(function() {
-                      $('#content4').prepend('<img src="img/text-4.png" class="imgText animated fadeIn"/>');
-                    }, 1500);
+                      $('#content4').append('<img id="text4" src="img/text-4.png" class="imgText cornerimage5a animated fadeIn"/>');
+                    }, 1000);
                 }
                 if(index == 5){
-                    $('#content5').prepend('<img src="img/strawberry.png" class="imgMini3 cornerimage5a animated bounceInDown" />');
-                    setTimeout(function() {
-                      $('#content5').append('<img src="img/text-5.png" class="imgText cornerimage5b animated fadeIn"/>');
-                    }, 1500);
-                }
-                if(index == 6){
+                  $.fn.fullpage.moveTo('slide5', 0);
                   $('#content6').prepend('<div class="innerbox animated slideInDown">Mengapa kami berbeda dengan yogurt lain?</div>');
                   $('#content7').empty();
                   $('#content8').empty();
+                  $('#content9').empty();
                 }
-                if(index == 7){
+                if(index == 6){
                     $('#content10').append('<img src="img/yo-3.png" class="imgRealMini animated bounceInLeft"/><img src="img/yo-1.png" class="imgRealMini animated bounceInDown"/><img src="img/yo-2.png" class="imgRealMini animated bounceInRight"/>');
                     setTimeout(function() {
                       $('#content10').empty();
-                      $('#section7').addClass('blush12');
+                      $('#section6').addClass('blush12');
                     }, 1500);
                 }
               },
@@ -98,13 +96,23 @@
                   if (index == '1') {
                     clearInterval(slideTimeout);
                   }
-                  else if(index == 6 && !sliding) {
+                  else if(index == 5 && !sliding) {
                     //alert(slideIndex);
-    			            if(direction == 'down' && slideIndex < 4) {
+    			            if(direction == 'down' && slideIndex2 < 4) {
     			                sliding = true;
     			                $.fn.fullpage.moveSlideRight();
-    			                slideIndex++;
+    			                slideIndex2++;
     			                return false;
+    			            }
+    			        } else if(index == 4 && !sliding) {
+    			            if(direction == 'down' && slideIndex1 < 2) {
+                        $('#text4').remove();
+                        $('#content4').append('<img src="img/strawberry.png" class="imgMini3 cornerimage5a animated bounceInDown" />');
+                        setTimeout(function() {
+                          $('#content4').append('<img src="img/text-5.png" class="imgAbsolute imgText animated fadeIn"/>');
+                        }, 1000);
+                        slideIndex1++;
+  			                return false;
     			            }
     			        } else if(sliding) {
     			            return false;
@@ -115,16 +123,15 @@
                     $('#content3').empty();
                   }
                   if(index != 4){
+                    slideIndex1 = 1;
                     $('#content4').empty();
                   }
                   if(index != 5){
-                    $('#content5').empty();
-                  }
-                  if(index != 6){
+                    slideIndex2 = 1;
                     $('#content6').empty();
                   }
-                  if(index != 7){
-                    $('#section7').removeClass('blush12');
+                  if(index != 6){
+                    $('#section6').removeClass('blush12');
                   }
     			    },
 
@@ -136,10 +143,11 @@
                   }
                   if(slideIndex == 2) {
                     $('#content8').empty();
+                    $('#content9').empty();
                     $('#content8').append('<div class="innerbox animated slideInDown">Kandungan gula & lemak yang berlebih akan mengurangi kesempurnaan yogurt. Oleh karena itu, kami mengurangi kadar gula dan lemak sehingga membuat yogurt heavenly blush semakin pas untuk dinikmati setiap hari.</div>');
                   }
                   if(slideIndex == 3) {
-                    $('#content9').append('<img src="img/label.png" class="imgMini1 animated fadeIn"></img>');
+                    $('#content9').append('<img src="img/label.png" class="imgMiniLogo animated fadeIn"></img>');
                   }
     			        sliding = false;
     			    }
@@ -165,25 +173,22 @@
         <a href="#slide3"><div class="bottom absoluteBottom"></div></a>
       </div>
       <div class="section blush5" id="section3">
-        <div id="content3" class="leftPad"></div>
+        <div id="content3"></div>
       </div>
       <div class="section blush6" id="section4">
-    			<div id="content4" class="rightPad"></div>
+    			<div class="slide active"><div id="content4"></div></div>
     	</div>
-      <div class="section blush7" id="section5">
-        <div id="content5"></div>
-      </div>
-      <div class="section blush8" id="section6">
+      <div class="section blush8" id="section5">
     			<div class="slide active"><div class="outerbox" id="content6"></div></div>
     	    <div class="slide"><div class="outerbox" id="content7"></div></div>
           <div class="slide"><div class="outerbox" id="content8"></div></div>
           <div class="slide"><div id="content9"></div></div>
     	</div>
-      <div class="section blush9" id="section7">
+      <div class="section blush9" id="section6">
         <div id="content10"></div>
       </div>
       <!-- Form Section -->
-      <div class="section contact" id="section8">
+      <div class="section contact" id="section7">
         <div class="content container form-container" id="submitForm">
             <div class="row">
                 <div class="col-lg-12 text-center">
