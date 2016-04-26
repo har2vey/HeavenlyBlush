@@ -89,6 +89,9 @@
                       $('#section6').addClass('blush12');
                     }, 1500);
                 }
+                if(index == 7){
+                  $('#submitForm').removeClass('invisible');
+                }
               },
 
               onLeave: function(index, nextIndex, direction) {
@@ -188,7 +191,7 @@
       </div>
       <!-- Form Section -->
       <div class="section contact" id="section7">
-        <div class="content container form-container" id="submitForm">
+        <div class="content container form-container invisible" id="submitForm">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>Get The Surprise!</h3>
