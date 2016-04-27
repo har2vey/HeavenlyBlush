@@ -14,36 +14,35 @@ $(function() {
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
+            var yogurt = $("input#yogurt:checked").val();
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "./promo.php",
                 type: "POST",
+                dataType: "json",
                 data: {
                     name: name,
                     phone: phone,
-                    email: email
+                    email: email,
+                    yogurt: yogurt
                 },
                 cache: false,
-                success: function() {
-
+                success: function(result) {
+                  //alert(JSON.stringify(result));
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function() {
+                error: function(result) {
+                  //alert(JSON.stringify(result));
                     // Fail message
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append("<strong>Sorry, server is not responding. Please try again later!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                    $('#section8').empty();
-                    $('#section8').append('<img src="img/Heavenly-Blush-12.jpg" class="imgFull animated fadeIn"/>');
+                    $('#section7').empty();
+                    $('#section7').append('<img src="img/Heavenly-Blush-12.jpg" class="imgFull animated fadeIn"/>');
                 },
             })
         },
