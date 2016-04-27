@@ -44,7 +44,7 @@
         });
     }
     //preload images
-    $(['img/yo.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/label.png','img/Heavenly-Blush-10.jpg']).preload();
+    $(['img/yo.png','img/yo_splash0.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/label.png','img/Heavenly-Blush-10.jpg']).preload();
 
     //start fullPage.js
   	var slideIndex1  = 1, slideIndex2  = 1, sliding = false;
@@ -70,10 +70,14 @@
                 }
                 if(index == 4){
                     $.fn.fullpage.moveTo('slide4', 0);
-                    $('#content4').prepend('<img src="img/yo_splash.png" class="imgMini2 animated bounceInDown" />');
+                    $('#content4').prepend('<img src="img/yo_splash0.png" class="imgMini2 animated bounceInDown" />');
                     setTimeout(function() {
-                      $('#content4').append('<img id="text4" src="img/text-4.png" class="imgText imgCornerLeft animated fadeIn"/>');
-                    }, 1000);
+                      $('#content4').empty();
+                      $('#content4').prepend('<img src="img/yo_splash.png" class="imgMini2" />');
+                      setTimeout(function() {
+                        $('#content4').append('<img id="text4" src="img/text-4.png" class="imgText imgCornerLeft animated fadeIn"/>');
+                      }, 500);
+                    }, 500);
                 }
                 if(index == 5){
                   $.fn.fullpage.moveTo('slide5', 0);
