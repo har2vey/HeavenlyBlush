@@ -333,7 +333,7 @@ header .intro-text .skills {
      -o-background-size: cover;
  }
 
- .blush13a {
+ .indomaret {
      background: url("../img/Heavenly-Blush-12.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
@@ -342,8 +342,8 @@ header .intro-text .skills {
      -o-background-size: cover;
  }
 
- .blush13b {
-     background: url("../img/Heavenly-Blush-12.jpg") no-repeat center center scroll;
+ .alphamart {
+     background: url("../img/Heavenly-Blush-13.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -351,7 +351,7 @@ header .intro-text .skills {
      -o-background-size: cover;
  }
 
-.contact {
+ .contact {
     background: url("../img/qa-bg.jpg") no-repeat center center scroll;
     background-color: #fff;
     -webkit-background-size: cover;
