@@ -16,7 +16,7 @@ $(function() {
             var phone = $("input#phone").val();
             var yogurt = $("input#yogurt:checked").val();
             $.ajax({
-                url: "promo.php",
+                url: "http://api.asamnyapas.com/promo.php",
                 type: "POST",
                 dataType: "json",
                 data: {
