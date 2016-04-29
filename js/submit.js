@@ -28,13 +28,17 @@ $(function() {
                 cache: false,
                 success: function(result) {
                   //alert(JSON.stringify(result));
-                    //clear all fields
                     $('#contactForm').trigger("reset");
                 },
                 error: function(result) {
                   var res = jQuery.parseJSON(JSON.stringify(result));
-                  if (res.responseText == ""){
-                    $('#section7').remove();
+                  if (res.responseText == "" || (res.responseText.indexOf("Error!") > -1)){
+                      $('#success').html("<div class='alert alert-danger'>");
+                      $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                          .append("</button>");
+                      $('#success > .alert-danger').append("<strong>Mohon maaf, saat ini kode promosi telah habis!");
+                      $('#success > .alert-danger').append('</div>');
+                      $('#contactForm').trigger("reset");
                   }
                   else{
                     var code = res.responseText.split('-');
@@ -44,13 +48,6 @@ $(function() {
                       var coupon = code[0][0]+code[0][1]+code[0][2]+'-'+code[0][3]+code[0][4]+'-'+code[0][5]+code[0][6]+code[0][7]
                     }
                     //alert('your code: '+code[0]+', please claim at your nearest '+code[1]);
-                      $('#success').html("<div class='alert alert-danger'>");
-                      $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                          .append("</button>");
-                      $('#success > .alert-danger').append("<strong>Sorry, server is not responding. Please try again later!");
-                      $('#success > .alert-danger').append('</div>');
-                      //clear all fields
-                      $('#contactForm').trigger("reset");
                       $('#section7').empty();
                       $('#section7').removeClass('contact');
                       $('#section7').addClass(code[1]);
