@@ -42,7 +42,7 @@ $(function() {
                   }
                   else{
                     var code = res.responseText.split('-');
-                    if (code[1]=='alphamart'){
+                    if (code[1]=='alfamart'){
                       var coupon = code[0][0]+code[0][1]+code[0][2]+'-'+code[0][3]+code[0][4]+code[0][5]+'-'+code[0][6]+code[0][7]+code[0][8]
                     }else if (code[1]=='indomaret'){
                       var coupon = code[0][0]+code[0][1]+code[0][2]+'-'+code[0][3]+code[0][4]+'-'+code[0][5]+code[0][6]+code[0][7]

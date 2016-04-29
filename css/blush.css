@@ -334,7 +334,7 @@ header .intro-text .skills {
  }
 
  .indomaret {
-     background: url("../img/Heavenly-Blush-12.jpg") no-repeat center center scroll;
+     background: url("../img/indomaret.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -342,8 +342,8 @@ header .intro-text .skills {
      -o-background-size: cover;
  }
 
- .alphamart {
-     background: url("../img/Heavenly-Blush-13.jpg") no-repeat center center scroll;
+ .alfamart {
+     background: url("../img/alfamart.jpg") no-repeat center center scroll;
      background-color: #fff;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -618,6 +618,9 @@ box-shadow: none;
     .imgMini3 {
         width: 100%;
     }
+    .imgMini4 {
+        width: 38%;
+    }
     .imgText {
         width: 90%;
     }
@@ -656,6 +659,9 @@ box-shadow: none;
     }
     .imgMini3 {
         width: 150%;
+    }
+    .imgMini4 {
+        width: 93%;
     }
     .imgText {
         width: 200%;

@@ -55,7 +55,7 @@
         });
     }
     //preload images
-    $(['img/yo.png','img/yo_splash0.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/label.png','img/Heavenly-Blush-10.jpg']).preload();
+    $(['img/yo.png','img/yo_splash0.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/yo-blush.png','img/label.png']).preload();
 
     //start fullPage.js
   	var slideIndex1  = 1, slideIndex2  = 1, sliding = false;
@@ -101,7 +101,7 @@
                     $('#content10').append('<img src="img/yo-3.png" class="imgRealMini animated bounceInLeft"/><img src="img/yo-1.png" class="imgRealMini animated bounceInDown"/><img src="img/yo-2.png" class="imgRealMini animated bounceInRight"/>');
                     setTimeout(function() {
                       $('#content10').empty();
-                      $('#section6').addClass('blush12');
+                      $('#content10').append('<img src="img/yo-blush.png" class="imgMini4" />');
                     }, 1500);
                 }
                 if(index == 7){
@@ -148,7 +148,7 @@
                     $('#content6').empty();
                   }
                   if(index != 6){
-                    $('#section6').removeClass('blush12');
+                    $('#content10').empty();
                   }
     			    },
 
