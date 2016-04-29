@@ -51,7 +51,10 @@ $(function() {
                       $('#section7').empty();
                       $('#section7').removeClass('contact');
                       $('#section7').addClass(code[1]);
-                      $('#section7').append('<div id="code" class="fp-tableCell"><h1>'+coupon+'</h1></div>');
+                      setTimeout(function() {
+                        $('#section7').append('<div id="code" class="fp-tableCell animated flash"><h1>'+coupon+'</h1></div>');
+                      }, 500);
+
                   }
                 },
             })
