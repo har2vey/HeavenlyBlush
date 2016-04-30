@@ -36,10 +36,9 @@ $(function() {
                       $('#success').html("<div class='alert alert-danger'>");
                       $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                           .append("</button>");
-                      $('#success > .alert-danger').append("<strong>"+res.responseText);
+                      $('#success > .alert-danger').append("<strong>Mohon maaf, saat ini kode promosi telah habis!");
                       $('#success > .alert-danger').append('</div>');
                       $('#contactForm').trigger("reset");
-                      alert(JSON.stringify(result));
                   }
                   else{
                     var code = res.responseText.split('-');
