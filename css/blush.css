@@ -152,6 +152,9 @@ header .intro-text .skills {
     margin: auto;
     overflow: auto;
 }
+.absoluteCenter {
+  position: absolute;
+}
 .top {
 }
 
@@ -608,6 +611,87 @@ div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active
 box-shadow: none;
 }
 
+@media all and (orientation:portrait) {
+  .blush5 {
+      background: url("../img/mob-bg-4.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+  .blush8 {
+      background: url("../img/mob-bg-5.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+  .blush9 {
+      background: url("../img/mob-bg-6.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+
+  .imgMini1 {
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: auto;
+  }
+  .imgMini2 {
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: auto;
+  }
+  .imgMini3 {
+      width: 100%;
+  }
+  .imgMini4 {
+  }
+  .imgTextp1 {
+    top: 0;
+    bottom: 30%;
+    margin: auto;
+    overflow: auto;
+  }
+  .imgTextp2 {
+    top: 0;
+    bottom: 50%;
+    margin: auto;
+    overflow: auto;
+  }
+
+  .imgMiniLogo {
+  }
+  .imgRealMini {
+  }
+
+  .innerbox {
+    background: #fff;
+    opacity: .8;
+    max-width: 100%;
+    font-size: 1.5em;
+    color: #e82d78;
+    margin: 0 10% 75% 10%;
+    padding: 25px;
+    border-radius: 25px;
+    border: 2px solid #e82d78;
+  }
+
+}
+
 @media only screen and (min-width: 1600px) {
     .imgMini1 {
         width: 15%;
@@ -658,7 +742,7 @@ box-shadow: none;
         width: 75%;
     }
     .imgMini3 {
-        width: 150%;
+        width: 100%;
     }
     .imgMini4 {
         width: 93%;
@@ -667,7 +751,7 @@ box-shadow: none;
         width: 200%;
     }
     .imgMiniLogo {
-        width: 50%;
+        width: 70%;
     }
     .imgRealMini {
         width: 32%;
@@ -681,7 +765,7 @@ box-shadow: none;
       max-width: 100%;
       font-size: 1em;
       color: #e82d78;
-      margin: 0 10% 30% 10%;
+      margin: 0 0 75% 0;
       padding: 25px;
       border-radius: 25px;
       border: 2px solid #e82d78;

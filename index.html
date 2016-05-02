@@ -55,8 +55,14 @@
         });
     }
     //preload images
-    $(['img/yo.png','img/yo_splash0.png','img/yo_splash.png','img/strawberry.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/yo-blush.png','img/label.png']).preload();
+    $(['img/yo.png','img/yo_splash0.png','img/label-big.png','img/strawberry.png','img/strawberry2.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/yo-blush.png','img/label.png','img/label2.png']).preload();
 
+    if(window.innerHeight > window.innerWidth){
+      var mode = 'portrait';
+    }
+    else {
+      var mode = 'landscape';
+    }
     //start fullPage.js
   	var slideIndex1  = 1, slideIndex2  = 1, sliding = false;
   		$(document).ready(function() {
@@ -76,8 +82,8 @@
                 if(index == 3){
                     $('#content3').prepend('<img src="img/yo.png" class="animated imgMini1 bounceInDown" />');
                     setTimeout(function() {
-                      $('#content3').append('<img src="img/text-3.png" class="imgCornerRight imgText animated fadeIn"/>');
-                    }, 1000);
+                      $('#content3').append('<img src="img/text-3.png" class="imgCornerRight imgText imgTextp1 animated fadeIn"/>');
+                    }, 500);
                 }
                 if(index == 4){
                     $.fn.fullpage.moveTo('slide4', 0);
@@ -86,8 +92,8 @@
                       $('#content4').empty();
                       $('#content4').prepend('<img src="img/yo_splash.png" class="imgMini2" />');
                       setTimeout(function() {
-                        $('#content4').append('<img id="text4" src="img/text-4.png" class="imgText imgCornerLeft animated fadeIn"/>');
-                      }, 500);
+                        $('#content4').append('<img id="text4" src="img/text-4.png" class="imgText imgTextp2 imgCornerLeft animated fadeIn"/>');
+                      }, 100);
                     }, 500);
                 }
                 if(index == 5){
@@ -100,9 +106,9 @@
                 if(index == 6){
                     $('#content10').append('<img src="img/yo-3.png" class="imgRealMini animated bounceInLeft"/><img src="img/yo-1.png" class="imgRealMini animated bounceInDown"/><img src="img/yo-2.png" class="imgRealMini animated bounceInRight"/>');
                     setTimeout(function() {
-                      $('#content10').empty();
-                      $('#content10').append('<img src="img/yo-blush.png" class="imgMini4" />');
-                    }, 1500);
+                      //$('#content10').empty();
+                      $('#content10').prepend('<img src="img/label-big.png" class="absoluteCenter imgMini4 animated fadeIn" />');
+                    }, 1000);
                 }
                 if(index == 7){
                   $('#submitForm').removeClass('invisible');
@@ -124,10 +130,14 @@
     			        } else if(index == 4 && !sliding) {
     			            if(direction == 'down' && slideIndex1 < 2) {
                         $('#text4').remove();
-                        $('#content4').append('<img src="img/strawberry.png" class="imgMini3 imgCornerLeft animated bounceInDown" />');
+                        if (mode == 'portrait'){
+                          $('#content4').append('<img src="img/strawberry2.png" class="imgMini3 imgCornerLeft animated bounceInDown" />');
+                        }else {
+                          $('#content4').append('<img src="img/strawberry.png" class="imgMini3 imgCornerLeft animated bounceInDown" />');
+                        }
                         setTimeout(function() {
-                          $('#content4').append('<img src="img/text-5.png" class="imgText imgCornerRight animated fadeIn"/>');
-                        }, 1000);
+                          $('#content4').append('<img src="img/text-5.png" class="imgText imgTextp2 imgCornerRight animated fadeIn"/>');
+                        }, 500);
                         slideIndex1++;
   			                return false;
     			            }
@@ -164,7 +174,11 @@
                     $('#content8').append('<div class="innerbox animated slideInDown">Kandungan gula & lemak yang berlebih akan mengurangi kesempurnaan yogurt. Oleh karena itu, kami mengurangi kadar gula dan lemak sehingga membuat yogurt heavenly blush semakin pas untuk dinikmati setiap hari.</div>');
                   }
                   if(slideIndex == 3) {
-                    $('#content9').append('<img src="img/label.png" class="imgMiniLogo animated fadeIn"></img>');
+                    if (mode == 'portrait'){
+                      $('#content9').prepend('<img src="img/label2.png" class="imgMiniLogo animated fadeIn" />');
+                    }else{
+                      $('#content9').prepend('<img src="img/label.png" class="imgMiniLogo animated fadeIn" />');
+                    }
                   }
     			        sliding = false;
     			    }
