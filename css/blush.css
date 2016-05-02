@@ -612,6 +612,30 @@ box-shadow: none;
 }
 
 @media all and (orientation:portrait) {
+  .blush1 {
+      background: url("../img/mob-1.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+  .blush2 {
+      background: url("../img/mob-2.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+  .blush3 {
+      background: url("../img/mob-3.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
   .blush5 {
       background: url("../img/mob-bg-4.jpg") no-repeat center center scroll;
       background-color: #fff;
@@ -771,28 +795,4 @@ box-shadow: none;
       border: 2px solid #e82d78;
     }
 
-    .blush1 {
-        background: url("../img/mob-1.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush2 {
-        background: url("../img/mob-2.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
-    .blush3 {
-        background: url("../img/mob-3.jpg") no-repeat center center scroll;
-        background-color: #fff;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-    }
 }
