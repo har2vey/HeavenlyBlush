@@ -49,13 +49,11 @@
     </script>
 
     <script type="text/javascript">
-    $.fn.preload = function() {
-        this.each(function(){
-            $('<img/>')[0].src = this;
+    function preload(arrayOfImages) {
+        $(arrayOfImages).each(function(){
+            (new Image()).src = this;
         });
     }
-    //preload images
-    $(['img/yo.png','img/yo_splash0.png','img/label-big.png','img/strawberry.png','img/strawberry2.png','img/yo-1.png','img/yo-2.png','img/yo-3.png','img/yo-blush.png','img/label.png','img/label2.png']).preload();
 
     if(window.innerHeight > window.innerWidth){
       var mode = 'portrait';
@@ -66,6 +64,21 @@
     //start fullPage.js
   	var slideIndex1  = 1, slideIndex2  = 1, sliding = false;
   		$(document).ready(function() {
+        //preload animated images
+        preload([
+            'img/yo.png',
+            'img/yo_splash0.png',
+            'img/label-big.png',
+            'img/strawberry.png',
+            'img/strawberry2.png',
+            'img/yo-1.png',
+            'img/yo-2.png',
+            'img/yo-3.png',
+            'img/yo-blush.png',
+            'img/label.png',
+            'img/label2.png'
+        ]);
+
         $('#fullpage').fullpage({
             anchors:['index','video','slide3','slide4','slide5','slide6','submit'],
   					scrollingSpeed:1000,
@@ -108,7 +121,7 @@
                     setTimeout(function() {
                       //$('#content10').empty();
                       $('#content10').prepend('<img src="img/label-big.png" class="absoluteCenter imgMini4 animated fadeIn" />');
-                    }, 1000);
+                    }, 500);
                 }
                 if(index == 7){
                   $('#submitForm').removeClass('invisible');
