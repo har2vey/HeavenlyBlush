@@ -152,9 +152,14 @@ header .intro-text .skills {
     margin: auto;
     overflow: auto;
 }
+.absoluteCenterFront {
+  position: relative;
+  z-index: 1;
+}
 .absoluteCenter {
   position: absolute;
 }
+
 .top {
 }
 
