@@ -144,14 +144,15 @@
     			            if(direction == 'down' && slideIndex1 < 2) {
                         $('#text4').remove();
                         if (mode == 'portrait'){
-                          $('#content4').append('<img src="img/strawberry2.png" class="imgMini3 imgCornerLeft animated bounceInDown" />');
+                          $('#content4').append('<img src="img/strawberry2.png" id="strawberry" class="imgMini3 imgCornerLeft animated bounceInDown" />');
                         }else {
-                          $('#content4').append('<img src="img/strawberry.png" class="imgMini3 imgCornerLeft animated bounceInDown" />');
+                          $('#content4').append('<img src="img/strawberry.png" id="strawberry" class="imgMini3 imgCornerLeft animated bounceInDown" />');
                         }
                         setTimeout(function() {
+                          $('#text4').remove();
                           $('#content4').append('<img src="img/text-5.png" class="imgText imgTextp2 imgCornerRight animated fadeIn"/>');
+                          slideIndex1++;
                         }, 500);
-                        slideIndex1++;
   			                return false;
     			            }
     			        } else if(sliding) {
