@@ -41,18 +41,19 @@ $(function() {
                       $('#contactForm').trigger("reset");
                   }
                   else{
-                    var code = res.responseText.split('-');
-                    if (code[1]=='alfamart'){
-                      var coupon = code[0][0]+code[0][1]+code[0][2]+'-'+code[0][3]+code[0][4]+code[0][5]+'-'+code[0][6]+code[0][7]+code[0][8]
-                    }else if (code[1]=='indomaret'){
-                      var coupon = code[0][0]+code[0][1]+code[0][2]+'-'+code[0][3]+code[0][4]+'-'+code[0][5]+code[0][6]+code[0][7]
-                    }
+                    // var code = res.responseText.split('-');
+                    // if (code[1]=='alfamart'){
+                    //   var coupon = code[0][0]+code[0][1]+code[0][2]+'-'+code[0][3]+code[0][4]+code[0][5]+'-'+code[0][6]+code[0][7]+code[0][8]
+                    // }else if (code[1]=='indomaret'){
+                    //   var coupon = code[0][0]+code[0][1]+code[0][2]+'-'+code[0][3]+code[0][4]+'-'+code[0][5]+code[0][6]+code[0][7]
+                    // }
                     //alert('your code: '+code[0]+', please claim at your nearest '+code[1]);
+                    var code = res.responseText;
                       $('#section7').empty();
                       $('#section7').removeClass('contact');
-                      $('#section7').addClass(code[1]);
+                      $('#section7').addClass('free');
                       setTimeout(function() {
-                        $('#section7').append('<div id="code" class="fp-tableCell animated flash"><h1>'+coupon+'</h1></div>');
+                        $('#section7').append('<div id="code" class="fp-tableCell animated flash"><h1>'+code+'</h1></div>');
                       }, 500);
 
                   }

@@ -81,7 +81,7 @@
 
         $('#fullpage').fullpage({
             anchors:['index','video','slide3','slide4','slide5','slide6','submit'],
-  					scrollingSpeed:1000,
+  					scrollingSpeed:1500,
             resize: true,
             css3: true,
 
@@ -89,13 +89,13 @@
                 if (index == '1') {
                   slideTimeout = setInterval(function () {
                     $.fn.fullpage.moveSlideRight();
-                }, 2000);}
+                }, 4000);}
 
                 //execute animation
                 if(index == 3){
                     $('#content3').prepend('<img src="img/yo.png" class="animated imgMini1 bounceInDown" />');
                     setTimeout(function() {
-                      $('#content3').append('<img src="img/text-3.png" class="imgCornerRight imgText imgTextp1 animated fadeIn"/>');
+                      $('#content3').append('<img src="img/text-31.png" class="imgCornerRight imgText imgTextp1 animated fadeIn"/>');
                     }, 500);
                 }
                 if(index == 4){
@@ -121,7 +121,11 @@
                     setTimeout(function() {
                       //$('#content10').empty();
                       $('#content10').prepend('<img src="img/label-big.png" class="absoluteCenter imgMini4 animated fadeIn" />');
-                    }, 1000);
+
+                      setTimeout(function() {
+                        $('#content10').append('<img src="img/yo-4.png" class="imgRealMiniNew absoluteCenterFront animated bounceInRight"/>');
+                      }, 500);
+                    }, 500);
                 }
                 if(index == 7){
                   $('#submitForm').removeClass('invisible');
@@ -144,13 +148,16 @@
     			            if(direction == 'down' && slideIndex1 < 2) {
                         $('#text4').remove();
                         if (mode == 'portrait'){
+                          $('#strawberry').remove();
                           $('#content4').append('<img src="img/strawberry2.png" id="strawberry" class="imgMini3 imgCornerLeft animated bounceInDown" />');
                         }else {
+                          $('#strawberry').remove();
                           $('#content4').append('<img src="img/strawberry.png" id="strawberry" class="imgMini3 imgCornerLeft animated bounceInDown" />');
                         }
                         setTimeout(function() {
                           $('#text4').remove();
-                          $('#content4').append('<img src="img/text-5.png" class="imgText imgTextp2 imgCornerRight animated fadeIn"/>');
+                          $('#text5').remove();
+                          $('#content4').append('<img src="img/text-5.png" id="text5" class="imgText imgTextp2 imgCornerRight animated fadeIn"/>');
                           slideIndex1++;
                         }, 500);
   			                return false;
@@ -207,10 +214,10 @@
     <!-- Header -->
     <div id="fullpage">
     	<div class="section" id="section1">
-    			<div class="slide active blush1">
-          </div>
-    	    <div class="slide blush2"><h1></h1></div>
+    			<div class="slide active blush0"></div>
+          <div class="slide blush1"><h1></h1></div>
     	    <div class="slide blush3"><h1></h1></div>
+    	    <div class="slide blush2"><h1></h1></div>
     	</div>
       <div class="section blush4" id="section2">
     		<iframe src="https://www.youtube.com/embed/0ueuHLMXybc" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>

@@ -158,6 +158,14 @@ header .intro-text .skills {
 }
 .absoluteCenter {
   position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  overflow: auto;
 }
 
 .top {
@@ -239,6 +247,14 @@ header .intro-text .skills {
   display: none;
 }
 
+  .blush0 {
+      background: url("../img/blush_00.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
   .blush1 {
       background: url("../img/blush_01.jpg") no-repeat center center scroll;
       background-color: #fff;
@@ -256,7 +272,7 @@ header .intro-text .skills {
       -o-background-size: cover;
   }
   .blush3 {
-      background: url("../img/blush_03.jpg") no-repeat center center scroll;
+      background: url("../img/blush_032.jpg") no-repeat center center scroll;
       background-color: #fff;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -359,6 +375,15 @@ header .intro-text .skills {
      -o-background-size: cover;
  }
 
+ .free {
+     background: url("../img/free.jpg") no-repeat center center scroll;
+     background-color: #fff;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+ }
+
  .contact {
     background: url("../img/qa-bg.jpg") no-repeat center center scroll;
     background-color: #fff;
@@ -372,7 +397,7 @@ header .intro-text .skills {
     padding: 0px 22% 0px 22%;
 }
 
-@media(min-width:768px) {
+@media(min-width:768px) and (orientation: portrait) {
 
     header .intro-text .name {
         font-size: 4.75em;
@@ -380,6 +405,20 @@ header .intro-text .skills {
 
     header .intro-text .skills {
         font-size: 1.75em;
+    }
+
+    .imgMini4 {
+        width: 60%;
+    }
+    .imgRealMini {
+        width: 20%;
+        height: 20%;
+        height: auto;
+    }
+    .imgRealMiniNew {
+        width: 30%;
+        height: 30%;
+        height: auto;
     }
 }
 
@@ -617,6 +656,14 @@ box-shadow: none;
 }
 
 @media all and (orientation:portrait) {
+  .blush0 {
+      background: url("../img/mob-0.jpg") no-repeat center center scroll;
+      background-color: #fff;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
   .blush1 {
       background: url("../img/mob-1.jpg") no-repeat center center scroll;
       background-color: #fff;
@@ -634,7 +681,7 @@ box-shadow: none;
       -o-background-size: cover;
   }
   .blush3 {
-      background: url("../img/mob-3.jpg") no-repeat center center scroll;
+      background: url("../img/mob-02.jpg") no-repeat center center scroll;
       background-color: #fff;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -706,6 +753,8 @@ box-shadow: none;
   }
   .imgRealMini {
   }
+  .imgRealMiniNew {
+  }
 
   .innerbox {
     background: #fff;
@@ -745,6 +794,11 @@ box-shadow: none;
         height: 13%;
         height: auto;
     }
+    .imgRealMiniNew {
+        width: 20%;
+        height: 20%;
+        height: auto;
+    }
 
     .content {
         padding: 0px 0px 0px 0px;
@@ -763,7 +817,54 @@ box-shadow: none;
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 760px) {
+    .imgMini1 {
+        width: 15%;
+    }
+    .imgMini2 {
+        width: 35%;
+    }
+    .imgMini3 {
+        width: 90%;
+    }
+    .imgMini4 {
+        width: 38%;
+    }
+    .imgText {
+        width: 100%;
+    }
+    .imgMiniLogo {
+        width: 20%;
+    }
+    .imgRealMini {
+        width: 11%;
+        height: 11%;
+        height: auto;
+    }
+    .imgRealMiniNew {
+        width: 15%;
+        height: 15%;
+        height: auto;
+    }
+
+    .content {
+        padding: 0px 10% 0px 10%;
+    }
+
+    .innerbox {
+      background: #fff;
+      opacity: .8;
+      max-width: 100%;
+      font-size: 1em;
+      color: #e82d78;
+      margin: 0 0 75% 0;
+      padding: 25px;
+      border-radius: 25px;
+      border: 2px solid #e82d78;
+    }
+}
+
+@media only screen and (max-width: 450px) {
     .imgMini1 {
         width: 35%;
     }
@@ -783,8 +884,13 @@ box-shadow: none;
         width: 70%;
     }
     .imgRealMini {
-        width: 32%;
-        height: 32%;
+        width: 20%;
+        height: 20%;
+        height: auto;
+    }
+    .imgRealMiniNew {
+        width: 31%;
+        height: 31%;
         height: auto;
     }
 
@@ -799,5 +905,4 @@ box-shadow: none;
       border-radius: 25px;
       border: 2px solid #e82d78;
     }
-
 }
